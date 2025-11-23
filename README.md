@@ -1,231 +1,85 @@
-flowchart TD
+# PACE Full-Cycle Workflow
 
-%% INITIAL CONTACT & ENROLLMENT
-A[Initial Contact  
-• Participant calls PACE  
-• OR marketing outreach  
-• OR referral from hospital/clinic/family] --> B[Intake Pre-Screen  
-• Eligibility, service area  
-• Age 55+  
-• Insurance review  
-• Basic ADL/IADL needs]
+This repository contains the complete Program of All-Inclusive Care for the Elderly (PACE) operational workflow, including enrollment, IDT processes, HCC workflows, referrals, authorizations, loop closure, and the 6-month reassessment cycle.
 
-B --> C[In-Home Intake Visit  
-• RN/MSW visit  
-• Home safety preview  
-• ADL/IADL baseline  
-• Medication review]
+---
 
-C --> D[State LOC Determination  
-• Nursing home level of care required  
-• Approval → continue  
-• Denial → appeal or private pay]
-
-D --> E[Enrollment Agreement Signing  
-• HIPAA NPP  
-• Rights & Responsibilities  
-• Emergency plan  
-• Financial explanation  
-• Start date assigned]
-
-%% IDT INITIAL ASSESSMENTS
-E --> F[IDT Initial Assessments (Within 30 Days)  
-• PCP  
-• RN  
-• MSW  
-• PT/OT  
-• RT  
-• Dietitian  
-• Behavioral Health  
-• Activities  
-• Transportation  
-• HCC  
-• Personal Care]
-
-F --> G[Initial Care Plan  
-• Problem list  
-• Goals  
-• Interventions  
-• Visit frequency  
-• Home care needs  
-• DME needs  
-• Center attendance  
-• Emergency plan]
-
-%% HCC WORKFLOW
-G --> H[HCC Initial Home Visit (Within 30 Days)  
-• Safety evaluation  
-• ADL/IADL functional assessment  
-• Equipment needs  
-• Environmental risks  
-• Caregiving needs  
-• Life Alert need  
-• DME needs]
-
-H --> I[HCC Presents Findings to IDT  
-• DME recommendations  
-• Caregiving hours  
-• Home modifications  
-• Life Alert  
-• Safety risks  
-• Urgent needs]
-
-I --> J[IDT Decision & Approval  
-• Approves services  
-• Updates care plan  
-• Confirms referrals needed]
-
-%% REFERRALS & AUTHORIZATIONS
-J --> K[Referral Process  
-• RN/PCP enters referral  
-• HCC revises referral  
-• Adds instructions, codes, units  
-• Attaches intake forms (Life Alert)  
-• Assigns vendor]
-
-K --> L[Authorization Process  
-• Coverage review  
-• Units & dates  
-• Renewal rules  
-• Attachments  
-• Fax/submission to vendor]
-
-L --> M[Vendor Coordination  
-• Vendor accepts  
-• Schedules installation or caregiving start  
-• Provides ETA  
-• Completes service]
-
-%% LOOP CLOSURE
-M --> N[Loop Closure  
-• HCC confirms delivery  
-• Confirms activation/start of care  
-• Documents completion  
-• Updates care plan  
-• Communicates to IDT]
-
-%% 6-MONTH CYCLE
-N --> O[180-Day Reassessment  
-• HCC home reassessment  
-• ID
-## PACE Full-Cycle Workflow Diagram
+## PACE Workflow Diagram (Mermaid)
 
 ```mermaid
 flowchart TD
 
+%% INITIAL CONTACT
 A[Initial Contact  
-• Participant calls PACE  
-• OR marketing outreach  
-• OR referral from hospital/clinic/family] --> B[Intake Pre-Screen  
-• Eligibility, service area  
-• Age 55+  
-• Insurance review  
-• Basic ADL/IADL needs]
+Participant calls PACE or marketing outreach] --> B[Intake Pre-Screen  
+Eligibility, service area, age, medical needs]
 
 B --> C[In-Home Intake Visit  
-• RN/MSW visit  
-• Home safety preview  
-• ADL/IADL baseline  
-• Medication review]
+RN or MSW evaluates safety, ADLs, meds]
 
 C --> D[State LOC Determination  
-• Nursing home level of care required  
-• Approval → continue  
-• Denial → appeal or private pay]
+Nursing home level-of-care required]
 
-D --> E[Enrollment Agreement Signing  
-• HIPAA NPP  
-• Rights & Responsibilities  
-• Emergency plan  
-• Financial explanation  
-• Start date assigned]
+D --> E[Enrollment Agreement  
+HIPAA, Rights, Responsibilities, Start Date]
 
-E --> F[IDT Initial Assessments (Within 30 Days)  
-• PCP  
-• RN  
-• MSW  
-• PT/OT  
-• RT  
-• Dietitian  
-• Behavioral Health  
-• Activities  
-• Transportation  
-• HCC  
-• Personal Care]
+%% IDT ASSESSMENTS
+E --> F[IDT Assessments (30 Days)  
+RN, PCP, MSW, PT, OT, Dietitian, BH, RT, HCC]
 
 F --> G[Initial Care Plan  
-• Problem list  
-• Goals  
-• Interventions  
-• Visit frequency  
-• Home care needs  
-• DME needs  
-• Center attendance  
-• Emergency plan]
+Problems, goals, interventions]
 
-G --> H[HCC Initial Home Visit (Within 30 Days)  
-• Safety evaluation  
-• ADL/IADL functional assessment  
-• Equipment needs  
-• Environmental risks  
-• Caregiving needs  
-• Life Alert need  
-• DME needs]
+%% HCC INITIAL WORK
+G --> H[HCC Initial Home Visit  
+Home safety, ADLs, equipment, risks]
 
-H --> I[HCC Presents Findings to IDT  
-• DME recommendations  
-• Caregiving hours  
-• Home modifications  
-• Life Alert  
-• Safety risks  
-• Urgent needs]
+H --> I[HCC Presents Needs to IDT  
+Caregiving, DME, Life Alert, services]
 
-I --> J[IDT Decision & Approval  
-• Approves services  
-• Updates care plan  
-• Confirms referrals needed]
+I --> J[IDT Approval  
+Services authorized for care plan]
 
-J --> K[Referral Process  
-• RN/PCP enters referral  
-• HCC revises referral  
-• Adds instructions, codes, units  
-• Attaches intake forms (Life Alert)  
-• Assigns vendor]
+%% REFERRALS
+J --> K[Referral Entry  
+RN/PCP places referral]
 
-K --> L[Authorization Process  
-• Coverage review  
-• Units & dates  
-• Renewal rules  
-• Attachments  
-• Fax/submission to vendor]
+K --> L[HCC Edits Referral  
+Codes, units, vendor, instructions]
 
-L --> M[Vendor Coordination  
-• Vendor accepts  
-• Schedules installation or caregiving start  
-• Provides ETA  
-• Completes service]
+L --> M[Vendor Processing  
+Vendor schedules and delivers service]
 
+%% LOOP CLOSURE
 M --> N[Loop Closure  
-• HCC confirms delivery  
-• Confirms activation/start of care  
-• Documents completion  
-• Updates care plan  
-• Communicates to IDT]
+HCC confirms completion and documents]
 
+%% 6-MONTH CYCLE
 N --> O[180-Day Reassessment  
-• HCC home reassessment  
-• IDT discipline reassessments  
-• Renew caregiving hours  
-• Review DME needs  
-• Update safety  
-• Determine SDR if needs change]
+HCC reassesses home and services]
 
 O --> P[Ongoing Monitoring  
-• Monthly reviews  
-• Missed visits  
-• Changes in condition  
-• Hospitalizations  
-• New referrals]
+Monthly review, changes, new referrals]
 
 P --> G
 ```
+
+---
+
+## Contents
+- Full PACE operational workflow  
+- IDT and enrollment structure  
+- HCC process from assessment to loop closure  
+- Authorization and referral flow  
+- Six-month reassessment cycle  
+
+---
+
+## Purpose
+This diagram is used for training, consulting, and education on how PACE programs operate from the first participant call through enrollment and ongoing care management.
+
+---
+
+## How to View the Diagram
+GitHub now natively supports Mermaid diagrams.  
+If you are readin
